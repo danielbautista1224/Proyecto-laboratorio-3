@@ -226,7 +226,7 @@ public class InterfaceTeatro extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Vender");
+        jButton2.setText("Confirmacion de venta");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -296,6 +296,11 @@ public class InterfaceTeatro extends javax.swing.JFrame {
         jLabel8.setText("Fila:");
 
         Filap.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O" }));
+        Filap.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FilapActionPerformed(evt);
+            }
+        });
 
         jLabel9.setText("Ingrese precio:");
 
@@ -511,6 +516,10 @@ public class InterfaceTeatro extends javax.swing.JFrame {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void FilapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FilapActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FilapActionPerformed
 
     /**
      * @param args the command line arguments
