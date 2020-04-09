@@ -29,6 +29,7 @@ public class InterfaceTeatro extends javax.swing.JFrame {
     int v;
     int SD;
     public int price[] = new int[15];
+    int x;
    
 
     public void SillasDisponibles() {
