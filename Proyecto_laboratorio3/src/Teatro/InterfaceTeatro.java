@@ -12,7 +12,7 @@ import java.util.Arrays;
  * @author Andrew Romero
  */
 public class InterfaceTeatro extends javax.swing.JFrame {
-
+ 
     int Fila;
     int Columna;
     String sillas[][];
@@ -29,7 +29,7 @@ public class InterfaceTeatro extends javax.swing.JFrame {
     int v;
     int SD;
     public int price[] = new int[15];
-    int x;
+    
    
 
     public void SillasDisponibles() {
@@ -65,9 +65,9 @@ public class InterfaceTeatro extends javax.swing.JFrame {
         
         int PI = Integer.parseInt(PrecioI.getText());
         int FP = Filap.getSelectedIndex();
-        String FL = (String) Filap.getSelectedItem();
+        String F = (String) Filap.getSelectedItem();
         price[FP] = PI;
-        letra[FP] = FL;
+        letra[FP] = F;
         
         
         
