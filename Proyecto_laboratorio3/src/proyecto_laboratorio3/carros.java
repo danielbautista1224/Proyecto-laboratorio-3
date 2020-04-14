@@ -24,6 +24,18 @@ public class carros extends javax.swing.JFrame {
         LinkedList Total= new LinkedList();
         LinkedList placas= new LinkedList();
         LinkedList horaingreso= new LinkedList();
+        boolean uno =false;
+        boolean dos =false;
+        boolean tres =false;
+        boolean cuatro =false;
+        boolean cinco =false;
+        boolean seis =false;
+        boolean siete =false;
+        boolean ocho =false;
+        boolean nueve =false;
+        boolean diez =false;
+        boolean once =false;
+        boolean doce =false;
     public carros() {
        
         
@@ -212,77 +224,110 @@ public class carros extends javax.swing.JFrame {
         reserva2.clear();
         String placa=placafield.getText();
         String horaentrada=horafield.getText();
-        boolean uno =false;
-        boolean dos =false;
-        boolean tres =false;
-        boolean cuatro =false;
-        boolean cinco =false;
-        boolean seis =false;
-        boolean siete =false;
-        boolean ocho =false;
-        boolean nueve =false;
-        boolean diez =false;
-        boolean once =false;
-        boolean doce =false;
         reserva.addAll(placas);
         reserva2.addAll(horaingreso);
-        if(reserva.contains(placa)==false){
+       
         if(Espacios.getSelectedItem()=="Espacio 1."&&uno==false)
         {
             
             placas.add(placa);
             horaingreso.add(horaentrada);
+            uno=true;
         }   
+        else{
         if(Espacios.getSelectedItem()=="Espacio 2."&&dos==false)
         {
             placas.add(placa);
-        }   
+            horaingreso.add(horaentrada);
+            dos=true;
+        }  
+        else{
         if(Espacios.getSelectedItem()=="Espacio 3.")
         {
-          placas.add(placa);  
+          placas.add(placa);
+          horaingreso.add(horaentrada);
+          tres=true;
         }   
+        else{
         if(Espacios.getSelectedItem()=="Espacio 4.")
         {
            placas.add(placa); 
+           horaingreso.add(horaentrada);
+           cuatro=true;
         }  
+        else{
         if(Espacios.getSelectedItem()=="Espacio 5.")
         {
             placas.add(placa);
+            horaingreso.add(horaentrada);
+            cinco=true;
         }  
+        else{
         if(Espacios.getSelectedItem()=="Espacio 6.")
         {
             placas.add(placa);
+            horaingreso.add(horaentrada);
+            seis=true;
         }   
+        else{
         if(Espacios.getSelectedItem()=="Espacio 7.")
         {
             placas.add(placa);
+            horaingreso.add(horaentrada);
+            siete=true;
         }   
+        else{
         if(Espacios.getSelectedItem()=="Espacio 8.")
         {
             placas.add(placa);
+            horaingreso.add(horaentrada);
+            ocho=true;
         }   
+        else{
         if(Espacios.getSelectedItem()=="Espacio 9.")
         {
             placas.add(placa);
+            horaingreso.add(horaentrada);
+      nueve=true;
         }  
+        else{
         if(Espacios.getSelectedItem()=="Espacio 10.")
         {
             placas.add(placa);
+            horaingreso.add(horaentrada);
+            diez=true;
         }   
+        else{
         if(Espacios.getSelectedItem()=="Espacio 11.")
         {
             placas.add(placa);
-        }   
+            horaingreso.add(horaentrada);
+            once=true;
+        } else
+        {
         if(Espacios.getSelectedItem()=="Espacio 12.")
         {
-           placas.add(placa); 
-        }  
+           placas.add(placa);
+           horaingreso.add(horaentrada);
+           doce=true;
+        } 
+        
         else
         {
-           JOptionPane.showInputDialog(null,"espacio ocupado"); 
+           JOptionPane.showMessageDialog(null,"espacio ocupado"); 
         }
-      }
-        
+        }
+        }
+        }
+        }
+        }
+        }
+        }
+        }
+        }
+        }
+        }
+           
     }//GEN-LAST:event_botoingresoActionPerformed
 
     private void placafieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placafieldActionPerformed
