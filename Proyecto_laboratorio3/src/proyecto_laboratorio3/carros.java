@@ -7,6 +7,8 @@ package proyecto_laboratorio3;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Vector;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,12 +18,15 @@ public class carros extends javax.swing.JFrame {
 
     /**
      * Creates new form carros
-     */
-    public carros() {
+     */ Vector reserva=new Vector();
+        Vector reserva2=new Vector();
         int Perfectcounter=0;
         LinkedList Total= new LinkedList();
-        ArrayList<String> placas= new ArrayList<String>();
-        int puesto=0;
+        LinkedList placas= new LinkedList();
+        LinkedList horaingreso= new LinkedList();
+    public carros() {
+       
+        
         initComponents();
         Espacios.removeAllItems();
         Espacios.addItem("Espacio 1.");
@@ -203,11 +208,81 @@ public class carros extends javax.swing.JFrame {
 
     private void botoingresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoingresoActionPerformed
         // TODO add your handling code here:
-        ArrayList<Object> placas= new ArrayList<Object>();
+        reserva.clear();
+        reserva2.clear();
         String placa=placafield.getText();
-        String horasalida=horafield.getText();
-        placas.add(placa);
-
+        String horaentrada=horafield.getText();
+        boolean uno =false;
+        boolean dos =false;
+        boolean tres =false;
+        boolean cuatro =false;
+        boolean cinco =false;
+        boolean seis =false;
+        boolean siete =false;
+        boolean ocho =false;
+        boolean nueve =false;
+        boolean diez =false;
+        boolean once =false;
+        boolean doce =false;
+        reserva.addAll(placas);
+        reserva2.addAll(horaingreso);
+        if(reserva.contains(placa)==false){
+        if(Espacios.getSelectedItem()=="Espacio 1."&&uno==false)
+        {
+            
+            placas.add(placa);
+            horaingreso.add(horaentrada);
+        }   
+        if(Espacios.getSelectedItem()=="Espacio 2."&&dos==false)
+        {
+            placas.add(placa);
+        }   
+        if(Espacios.getSelectedItem()=="Espacio 3.")
+        {
+          placas.add(placa);  
+        }   
+        if(Espacios.getSelectedItem()=="Espacio 4.")
+        {
+           placas.add(placa); 
+        }  
+        if(Espacios.getSelectedItem()=="Espacio 5.")
+        {
+            placas.add(placa);
+        }  
+        if(Espacios.getSelectedItem()=="Espacio 6.")
+        {
+            placas.add(placa);
+        }   
+        if(Espacios.getSelectedItem()=="Espacio 7.")
+        {
+            placas.add(placa);
+        }   
+        if(Espacios.getSelectedItem()=="Espacio 8.")
+        {
+            placas.add(placa);
+        }   
+        if(Espacios.getSelectedItem()=="Espacio 9.")
+        {
+            placas.add(placa);
+        }  
+        if(Espacios.getSelectedItem()=="Espacio 10.")
+        {
+            placas.add(placa);
+        }   
+        if(Espacios.getSelectedItem()=="Espacio 11.")
+        {
+            placas.add(placa);
+        }   
+        if(Espacios.getSelectedItem()=="Espacio 12.")
+        {
+           placas.add(placa); 
+        }  
+        else
+        {
+           JOptionPane.showInputDialog(null,"espacio ocupado"); 
+        }
+      }
+        
     }//GEN-LAST:event_botoingresoActionPerformed
 
     private void placafieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placafieldActionPerformed
