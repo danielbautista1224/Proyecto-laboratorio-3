@@ -218,25 +218,27 @@ public class carros extends javax.swing.JFrame {
         // TODO add your handling code |here:
         String placa=placafield.getText();
         String horasalida=horafield.getText();
-        horasalidas.addAll(horaingreso);
-
-        if(Espacios.getSelectedItem()=="Espacio 1."&& uno==true && identificador==placa )
+        
+        reserva.addAll(placas);
+        reserva2.addAll(horaingreso);
+if(identificador.charAt(0)==placa.charAt(0)&&identificador.charAt(1)==placa.charAt(1)&&identificador.charAt(2)==placa.charAt(2)&&identificador.charAt(3)==placa.charAt(3)&&identificador.charAt(4)==placa.charAt(4)&&identificador.charAt(5)==placa.charAt(5))
+{
+        if(Espacios.getSelectedItem()=="Espacio 1."&& uno==true )
         {   
-            horasalidas.remove(reserva.indexOf(placa));
             horasalidas.add(reserva.indexOf(placa),horasalida);
             uno=false;
             identificador="";
             System.out.println(horasalidas.get(reserva.indexOf(placa)));
         }   
         else{
-        if(Espacios.getSelectedItem()=="Espacio 2."&&dos==true && identificador==placa)
+        if(Espacios.getSelectedItem()=="Espacio 2."&&dos==true )
         {horasalidas.remove(reserva.indexOf(placa));
             horasalidas.add(reserva.indexOf(placa),horasalida);
             dos=false;
             identificador="";
         }  
         else{
-        if(Espacios.getSelectedItem()=="Espacio 3."&&tres==true && identificador==placa)
+        if(Espacios.getSelectedItem()=="Espacio 3."&&tres==true )
         {
          horasalidas.remove(reserva.indexOf(placa));
             horasalidas.add(reserva.indexOf(placa),horasalida);
@@ -244,7 +246,7 @@ public class carros extends javax.swing.JFrame {
            identificador="";
         }   
         else{
-        if(Espacios.getSelectedItem()=="Espacio 4."&&cuatro==true && identificador==placa)
+        if(Espacios.getSelectedItem()=="Espacio 4."&&cuatro==true )
         {
           horasalidas.remove(reserva.indexOf(placa));
             horasalidas.add(reserva.indexOf(placa),horasalida);
@@ -252,7 +254,7 @@ public class carros extends javax.swing.JFrame {
             identificador="";
         }  
         else{
-        if(Espacios.getSelectedItem()=="Espacio 5."&&cinco==true && identificador==placa)
+        if(Espacios.getSelectedItem()=="Espacio 5."&&cinco==true )
         {
            horasalidas.remove(reserva.indexOf(placa));
             horasalidas.add(reserva.indexOf(placa),horasalida);
@@ -260,7 +262,7 @@ public class carros extends javax.swing.JFrame {
              identificador="";
         }  
         else{
-        if(Espacios.getSelectedItem()=="Espacio 6."&&seis==true && identificador==placa)
+        if(Espacios.getSelectedItem()=="Espacio 6."&&seis==true )
         {
             horasalidas.remove(reserva.indexOf(placa));
             horasalidas.add(reserva.indexOf(placa),horasalida);
@@ -268,7 +270,7 @@ public class carros extends javax.swing.JFrame {
              identificador="";
         }   
         else{
-        if(Espacios.getSelectedItem()=="Espacio 7."&&siete==true && identificador==placa)
+        if(Espacios.getSelectedItem()=="Espacio 7."&&siete==true )
         {
            horasalidas.remove(reserva.indexOf(placa));
             horasalidas.add(reserva.indexOf(placa),horasalida);
@@ -276,7 +278,7 @@ public class carros extends javax.swing.JFrame {
              identificador="";
         }   
         else{
-        if(Espacios.getSelectedItem()=="Espacio 8."&&ocho==true && identificador==placa)
+        if(Espacios.getSelectedItem()=="Espacio 8."&&ocho==true )
         {
             horasalidas.remove(reserva.indexOf(placa));
             horasalidas.add(reserva.indexOf(placa),horasalida);
@@ -284,7 +286,7 @@ public class carros extends javax.swing.JFrame {
              identificador="";
         }   
         else{
-        if(Espacios.getSelectedItem()=="Espacio 9."&&nueve==true && identificador==placa)
+        if(Espacios.getSelectedItem()=="Espacio 9."&&nueve==true )
         {
             horasalidas.remove(reserva.indexOf(placa));
             horasalidas.add(reserva.indexOf(placa),horasalida);
@@ -292,7 +294,7 @@ public class carros extends javax.swing.JFrame {
        identificador="";
         }  
         else{
-        if(Espacios.getSelectedItem()=="Espacio 10."&&diez==true && identificador==placa)
+        if(Espacios.getSelectedItem()=="Espacio 10."&&diez==true )
         {
             horasalidas.remove(reserva.indexOf(placa));
             horasalidas.add(reserva.indexOf(placa),horasalida);
@@ -300,7 +302,7 @@ public class carros extends javax.swing.JFrame {
              identificador="";
         }   
         else{
-        if(Espacios.getSelectedItem()=="Espacio 11."&&once==true && identificador==placa)
+        if(Espacios.getSelectedItem()=="Espacio 11."&&once==true )
         {
             horasalidas.remove(reserva.indexOf(placa));
             horasalidas.add(reserva.indexOf(placa),horasalida);
@@ -308,7 +310,7 @@ public class carros extends javax.swing.JFrame {
             identificador="";
         } else
         {
-        if(Espacios.getSelectedItem()=="Espacio 12."&&doce==true && identificador==placa)
+        if(Espacios.getSelectedItem()=="Espacio 12."&&doce==true )
         {
            horasalidas.remove(reserva.indexOf(placa));
             horasalidas.add(reserva.indexOf(placa),horasalida);
@@ -318,7 +320,7 @@ public class carros extends javax.swing.JFrame {
         
         else
         {
-           JOptionPane.showMessageDialog(null,"Espacio vacio o placa, incorrecta intente nuevamente."); 
+           JOptionPane.showMessageDialog(null,"Espacio vacio"); 
         }
         }
         }
@@ -330,6 +332,10 @@ public class carros extends javax.swing.JFrame {
         }
         }
         }
+        }
+}else
+        {
+           JOptionPane.showMessageDialog(null,"placa incorrecta intente nuevamente."); 
         }
     }//GEN-LAST:event_botonsalidaActionPerformed
 
@@ -362,7 +368,7 @@ public class carros extends javax.swing.JFrame {
             identificador=placa;
         }  
         else{
-        if(Espacios.getSelectedItem()=="Espacio 3.")
+        if(Espacios.getSelectedItem()=="Espacio 3."&&tres==false)
         {
           placas.add(placa);
           horaingreso.add(horaentrada);
@@ -370,7 +376,7 @@ public class carros extends javax.swing.JFrame {
           identificador=placa;
         }   
         else{
-        if(Espacios.getSelectedItem()=="Espacio 4.")
+        if(Espacios.getSelectedItem()=="Espacio 4."&&cuatro==false)
         {
            placas.add(placa); 
            horaingreso.add(horaentrada);
@@ -378,7 +384,7 @@ public class carros extends javax.swing.JFrame {
            identificador=placa;
         }  
         else{
-        if(Espacios.getSelectedItem()=="Espacio 5.")
+        if(Espacios.getSelectedItem()=="Espacio 5."&&cinco==false)
         {
             placas.add(placa);
             horaingreso.add(horaentrada);
@@ -386,7 +392,7 @@ public class carros extends javax.swing.JFrame {
             identificador=placa;
         }  
         else{
-        if(Espacios.getSelectedItem()=="Espacio 6.")
+        if(Espacios.getSelectedItem()=="Espacio 6."&&seis==false)
         {
             placas.add(placa);
             horaingreso.add(horaentrada);
@@ -394,7 +400,7 @@ public class carros extends javax.swing.JFrame {
             identificador=placa;
         }   
         else{
-        if(Espacios.getSelectedItem()=="Espacio 7.")
+        if(Espacios.getSelectedItem()=="Espacio 7."&&siete==false)
         {
             placas.add(placa);
             horaingreso.add(horaentrada);
@@ -402,7 +408,7 @@ public class carros extends javax.swing.JFrame {
             identificador=placa;
         }   
         else{
-        if(Espacios.getSelectedItem()=="Espacio 8.")
+        if(Espacios.getSelectedItem()=="Espacio 8."&&ocho==false)
         {
             placas.add(placa);
             horaingreso.add(horaentrada);
@@ -410,7 +416,7 @@ public class carros extends javax.swing.JFrame {
             identificador=placa;
         }   
         else{
-        if(Espacios.getSelectedItem()=="Espacio 9.")
+        if(Espacios.getSelectedItem()=="Espacio 9."&&nueve==false)
         {
             placas.add(placa);
             horaingreso.add(horaentrada);
@@ -418,7 +424,7 @@ public class carros extends javax.swing.JFrame {
       identificador=placa;
         }  
         else{
-        if(Espacios.getSelectedItem()=="Espacio 10.")
+        if(Espacios.getSelectedItem()=="Espacio 10."&&diez==false)
         {
             placas.add(placa);
             horaingreso.add(horaentrada);
@@ -426,7 +432,7 @@ public class carros extends javax.swing.JFrame {
             identificador=placa;
         }   
         else{
-        if(Espacios.getSelectedItem()=="Espacio 11.")
+        if(Espacios.getSelectedItem()=="Espacio 11."&&once==false)
         {
             placas.add(placa);
             horaingreso.add(horaentrada);
@@ -434,7 +440,7 @@ public class carros extends javax.swing.JFrame {
             identificador=placa;
         } else
         {
-        if(Espacios.getSelectedItem()=="Espacio 12.")
+        if(Espacios.getSelectedItem()=="Espacio 12."&&doce==false)
         {
            placas.add(placa);
            horaingreso.add(horaentrada);
