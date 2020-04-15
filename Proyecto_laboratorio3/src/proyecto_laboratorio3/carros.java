@@ -23,7 +23,11 @@ public class carros extends javax.swing.JFrame {
         int Perfectcounter=0;
         LinkedList Total= new LinkedList();
         LinkedList placas= new LinkedList();
-        LinkedList horaingreso= new LinkedList();
+        LinkedList horaingreso= new LinkedList(); 
+        Vector horasalidas= new Vector(); 
+        LinkedList tiempototal= new LinkedList();
+        LinkedList valorpagar= new LinkedList();
+        String identificador="";
         boolean uno =false;
         boolean dos =false;
         boolean tres =false;
@@ -212,6 +216,121 @@ public class carros extends javax.swing.JFrame {
 
     private void botonsalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonsalidaActionPerformed
         // TODO add your handling code |here:
+        String placa=placafield.getText();
+        String horasalida=horafield.getText();
+        horasalidas.addAll(horaingreso);
+
+        if(Espacios.getSelectedItem()=="Espacio 1."&& uno==true && identificador==placa )
+        {   
+            horasalidas.remove(reserva.indexOf(placa));
+            horasalidas.add(reserva.indexOf(placa),horasalida);
+            uno=false;
+            identificador="";
+            System.out.println(horasalidas.get(reserva.indexOf(placa)));
+        }   
+        else{
+        if(Espacios.getSelectedItem()=="Espacio 2."&&dos==true && identificador==placa)
+        {horasalidas.remove(reserva.indexOf(placa));
+            horasalidas.add(reserva.indexOf(placa),horasalida);
+            dos=false;
+            identificador="";
+        }  
+        else{
+        if(Espacios.getSelectedItem()=="Espacio 3."&&tres==true && identificador==placa)
+        {
+         horasalidas.remove(reserva.indexOf(placa));
+            horasalidas.add(reserva.indexOf(placa),horasalida);
+          tres=false;
+           identificador="";
+        }   
+        else{
+        if(Espacios.getSelectedItem()=="Espacio 4."&&cuatro==true && identificador==placa)
+        {
+          horasalidas.remove(reserva.indexOf(placa));
+            horasalidas.add(reserva.indexOf(placa),horasalida);
+           cuatro=false;
+            identificador="";
+        }  
+        else{
+        if(Espacios.getSelectedItem()=="Espacio 5."&&cinco==true && identificador==placa)
+        {
+           horasalidas.remove(reserva.indexOf(placa));
+            horasalidas.add(reserva.indexOf(placa),horasalida);
+            cinco=false;
+             identificador="";
+        }  
+        else{
+        if(Espacios.getSelectedItem()=="Espacio 6."&&seis==true && identificador==placa)
+        {
+            horasalidas.remove(reserva.indexOf(placa));
+            horasalidas.add(reserva.indexOf(placa),horasalida);
+            seis=false;
+             identificador="";
+        }   
+        else{
+        if(Espacios.getSelectedItem()=="Espacio 7."&&siete==true && identificador==placa)
+        {
+           horasalidas.remove(reserva.indexOf(placa));
+            horasalidas.add(reserva.indexOf(placa),horasalida);
+            siete=false;
+             identificador="";
+        }   
+        else{
+        if(Espacios.getSelectedItem()=="Espacio 8."&&ocho==true && identificador==placa)
+        {
+            horasalidas.remove(reserva.indexOf(placa));
+            horasalidas.add(reserva.indexOf(placa),horasalida);
+            ocho=false;
+             identificador="";
+        }   
+        else{
+        if(Espacios.getSelectedItem()=="Espacio 9."&&nueve==true && identificador==placa)
+        {
+            horasalidas.remove(reserva.indexOf(placa));
+            horasalidas.add(reserva.indexOf(placa),horasalida);
+      nueve=false;
+       identificador="";
+        }  
+        else{
+        if(Espacios.getSelectedItem()=="Espacio 10."&&diez==true && identificador==placa)
+        {
+            horasalidas.remove(reserva.indexOf(placa));
+            horasalidas.add(reserva.indexOf(placa),horasalida);
+            diez=false;
+             identificador="";
+        }   
+        else{
+        if(Espacios.getSelectedItem()=="Espacio 11."&&once==true && identificador==placa)
+        {
+            horasalidas.remove(reserva.indexOf(placa));
+            horasalidas.add(reserva.indexOf(placa),horasalida);
+            once=false;
+            identificador="";
+        } else
+        {
+        if(Espacios.getSelectedItem()=="Espacio 12."&&doce==true && identificador==placa)
+        {
+           horasalidas.remove(reserva.indexOf(placa));
+            horasalidas.add(reserva.indexOf(placa),horasalida);
+           doce=false;
+            identificador="";
+        } 
+        
+        else
+        {
+           JOptionPane.showMessageDialog(null,"Espacio vacio o placa, incorrecta intente nuevamente."); 
+        }
+        }
+        }
+        }
+        }
+        }
+        }
+        }
+        }
+        }
+        }
+        }
     }//GEN-LAST:event_botonsalidaActionPerformed
 
     private void EspaciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EspaciosActionPerformed
@@ -226,13 +345,13 @@ public class carros extends javax.swing.JFrame {
         String horaentrada=horafield.getText();
         reserva.addAll(placas);
         reserva2.addAll(horaingreso);
-       
-        if(Espacios.getSelectedItem()=="Espacio 1."&&uno==false)
+                   if(Espacios.getSelectedItem()=="Espacio 1."&&uno==false)
         {
             
             placas.add(placa);
             horaingreso.add(horaentrada);
             uno=true;
+            identificador=placa;
         }   
         else{
         if(Espacios.getSelectedItem()=="Espacio 2."&&dos==false)
@@ -240,6 +359,7 @@ public class carros extends javax.swing.JFrame {
             placas.add(placa);
             horaingreso.add(horaentrada);
             dos=true;
+            identificador=placa;
         }  
         else{
         if(Espacios.getSelectedItem()=="Espacio 3.")
@@ -247,6 +367,7 @@ public class carros extends javax.swing.JFrame {
           placas.add(placa);
           horaingreso.add(horaentrada);
           tres=true;
+          identificador=placa;
         }   
         else{
         if(Espacios.getSelectedItem()=="Espacio 4.")
@@ -254,6 +375,7 @@ public class carros extends javax.swing.JFrame {
            placas.add(placa); 
            horaingreso.add(horaentrada);
            cuatro=true;
+           identificador=placa;
         }  
         else{
         if(Espacios.getSelectedItem()=="Espacio 5.")
@@ -261,6 +383,7 @@ public class carros extends javax.swing.JFrame {
             placas.add(placa);
             horaingreso.add(horaentrada);
             cinco=true;
+            identificador=placa;
         }  
         else{
         if(Espacios.getSelectedItem()=="Espacio 6.")
@@ -268,6 +391,7 @@ public class carros extends javax.swing.JFrame {
             placas.add(placa);
             horaingreso.add(horaentrada);
             seis=true;
+            identificador=placa;
         }   
         else{
         if(Espacios.getSelectedItem()=="Espacio 7.")
@@ -275,6 +399,7 @@ public class carros extends javax.swing.JFrame {
             placas.add(placa);
             horaingreso.add(horaentrada);
             siete=true;
+            identificador=placa;
         }   
         else{
         if(Espacios.getSelectedItem()=="Espacio 8.")
@@ -282,6 +407,7 @@ public class carros extends javax.swing.JFrame {
             placas.add(placa);
             horaingreso.add(horaentrada);
             ocho=true;
+            identificador=placa;
         }   
         else{
         if(Espacios.getSelectedItem()=="Espacio 9.")
@@ -289,6 +415,7 @@ public class carros extends javax.swing.JFrame {
             placas.add(placa);
             horaingreso.add(horaentrada);
       nueve=true;
+      identificador=placa;
         }  
         else{
         if(Espacios.getSelectedItem()=="Espacio 10.")
@@ -296,6 +423,7 @@ public class carros extends javax.swing.JFrame {
             placas.add(placa);
             horaingreso.add(horaentrada);
             diez=true;
+            identificador=placa;
         }   
         else{
         if(Espacios.getSelectedItem()=="Espacio 11.")
@@ -303,6 +431,7 @@ public class carros extends javax.swing.JFrame {
             placas.add(placa);
             horaingreso.add(horaentrada);
             once=true;
+            identificador=placa;
         } else
         {
         if(Espacios.getSelectedItem()=="Espacio 12.")
@@ -310,6 +439,7 @@ public class carros extends javax.swing.JFrame {
            placas.add(placa);
            horaingreso.add(horaentrada);
            doce=true;
+           identificador=placa;
         } 
         
         else
