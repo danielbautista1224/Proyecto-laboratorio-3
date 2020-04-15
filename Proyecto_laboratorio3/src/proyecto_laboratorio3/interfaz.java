@@ -111,7 +111,7 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-    motos mot = new motos ();
+    motos1 mot = new motos1 ();
     mot.setVisible(true);
   // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
