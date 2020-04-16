@@ -480,8 +480,8 @@ public class carros extends javax.swing.JFrame {
         // TODO add your handling code here:
         for(int contadorultradiscreto=0;contadorultradiscreto<placas.size();contadorultradiscreto++)
         {
-            
-            int minutoss=0,horass=0,tempo=0;
+            String precio="";
+            int minutoss=0,horass=0,tempo=0,auxiliarpalprecio=0;
             int mminuto=0,hhora=0,doubletempo=0;
             String auxiliaresdevuelo1="",minutos="",horas="";
             String auxiliaresdevuelo2="",minuto="",hora="",totaltiempo="";
@@ -521,6 +521,14 @@ public class carros extends javax.swing.JFrame {
            }          
            jTable1.setValueAt(totaltiempo,contadorultradiscreto,3);
            tiempo=(tempo*60)+doubletempo;
+           if(tiempo>600){
+                precio="$13000";
+            }else
+            {
+                auxiliarpalprecio=tiempo*70;
+                precio="$"+auxiliarpalprecio;
+            }
+            jTable1.setValueAt(precio,contadorultradiscreto,4);
         }
     }//GEN-LAST:event_ganaActionPerformed
 
