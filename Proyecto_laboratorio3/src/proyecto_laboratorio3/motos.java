@@ -1,24 +1,24 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package proyecto_laboratorio3;
 
 import java.util.LinkedList;
 import java.util.Vector;
 import javax.swing.JOptionPane;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author ASUS
  */
-public class Bicicletas extends javax.swing.JFrame {
+public class motos extends javax.swing.JFrame {
 
     /**
-     * Creates new form Bicicletas
-     */Vector reserva=new Vector();
+     * Creates new form motos
+     */
+    Vector reserva=new Vector();
         Vector reserva2=new Vector();
         int Perfectcounter=0;
         LinkedList Total= new LinkedList();
@@ -34,8 +34,10 @@ public class Bicicletas extends javax.swing.JFrame {
         boolean cuatro =false;
         boolean cinco =false;
         boolean seis =false;
-    public Bicicletas() {
-        initComponents();
+        boolean siete =false;
+        boolean ocho =false;
+        
+    public motos() {
         initComponents();
          Espacios.removeAllItems();
         Espacios.addItem("Espacio 1.");
@@ -44,6 +46,8 @@ public class Bicicletas extends javax.swing.JFrame {
         Espacios.addItem("Espacio 4.");
         Espacios.addItem("Espacio 5.");
         Espacios.addItem("Espacio 6.");
+        Espacios.addItem("Espacio 7.");
+        Espacios.addItem("Espacio 8.");
     }
 
     /**
@@ -55,36 +59,54 @@ public class Bicicletas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        botoingreso = new javax.swing.JButton();
-        botonsalida = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        gana = new javax.swing.JButton();
         placafield = new javax.swing.JTextField();
-        Espacios = new javax.swing.JComboBox<>();
         horafield = new javax.swing.JTextField();
+        botoingreso = new javax.swing.JButton();
+        botonsalida = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        gana = new javax.swing.JButton();
+        Espacios = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        botoingreso.setText("igresar Bicicleta");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setText("Gestion de Motos");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setText("Placa");
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setText("Hora de Entrada/Salida");
+
+        placafield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                placafieldActionPerformed(evt);
+            }
+        });
+
+        horafield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                horafieldActionPerformed(evt);
+            }
+        });
+
+        botoingreso.setText("igresar moto");
         botoingreso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botoingresoActionPerformed(evt);
             }
         });
 
-        botonsalida.setText("sacar Bicicleta");
+        botonsalida.setText("sacar moto");
         botonsalida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonsalidaActionPerformed(evt);
             }
         });
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Gestion de Bicicletas");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -99,12 +121,6 @@ public class Bicicletas extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable1);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Placa");
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("Hora de Entrada/Salida");
-
         gana.setText("calcular ganancia actual");
         gana.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,22 +128,10 @@ public class Bicicletas extends javax.swing.JFrame {
             }
         });
 
-        placafield.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                placafieldActionPerformed(evt);
-            }
-        });
-
         Espacios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         Espacios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EspaciosActionPerformed(evt);
-            }
-        });
-
-        horafield.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                horafieldActionPerformed(evt);
             }
         });
 
@@ -156,19 +160,19 @@ public class Bicicletas extends javax.swing.JFrame {
                                 .addComponent(botonsalida)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Espacios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59))
+                .addGap(29, 29, 29))
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 447, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 467, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(171, 171, 171)
-                        .addComponent(gana))
+                        .addGap(145, 145, 145)
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(154, 154, 154)
-                        .addComponent(jLabel1)))
+                        .addGap(171, 171, 171)
+                        .addComponent(gana)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -176,16 +180,12 @@ public class Bicicletas extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Espacios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2)
+                    .addComponent(Espacios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(placafield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(horafield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -197,11 +197,19 @@ public class Bicicletas extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(gana)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void placafieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placafieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_placafieldActionPerformed
+
+    private void horafieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horafieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_horafieldActionPerformed
 
     private void botoingresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botoingresoActionPerformed
         // TODO add your handling code here:
@@ -251,14 +259,43 @@ public class Bicicletas extends javax.swing.JFrame {
                             cinco=true;
                             identificador=placa;
                         }
-                        else
-                        {
-                              JOptionPane.showMessageDialog(null,"espacio ocupado"); 
+                        else{
+                            if(Espacios.getSelectedItem()=="Espacio 6."&&seis==false)
+                            {
+                                placas.add(placa);
+                                horaingreso.add(horaentrada);
+                                seis=true;
+                                identificador=placa;
+                            }
+                            else{
+                                if(Espacios.getSelectedItem()=="Espacio 7."&&siete==false)
+                                {
+                                    placas.add(placa);
+                                    horaingreso.add(horaentrada);
+                                    siete=true;
+                                    identificador=placa;
+                                }
+                                else{
+                                    if(Espacios.getSelectedItem()=="Espacio 8."&&ocho==false)
+                                    {
+                                        placas.add(placa);
+                                        horaingreso.add(horaentrada);
+                                        ocho=true;
+                                        identificador=placa;
+                                    }
+                                    else
+                                    {
+                                         JOptionPane.showMessageDialog(null,"espacio ocupado"); 
+                                    }
+                                    
+                                }
+                            }
                         }
                     }
                 }
             }
         }
+
     }//GEN-LAST:event_botoingresoActionPerformed
 
     private void botonsalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonsalidaActionPerformed
@@ -318,7 +355,25 @@ public class Bicicletas extends javax.swing.JFrame {
                                     identificador="";
                                 }
                                 else{
-                                     JOptionPane.showMessageDialog(null,"Espacio vacio");
+                                    if(Espacios.getSelectedItem()=="Espacio 7."&&siete==true )
+                                    {
+
+                                        horasalidas.add(reserva.indexOf(placa),horasalida);
+                                        siete=false;
+                                        identificador="";
+                                    }
+                                    else{
+                                        if(Espacios.getSelectedItem()=="Espacio 8."&&ocho==true )
+                                        {
+
+                                            horasalidas.add(reserva.indexOf(placa),horasalida);
+                                            ocho=false;
+                                            identificador="";
+                                        }
+                                        else{
+                                          JOptionPane.showMessageDialog(null,"Espacio vacio");
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -379,17 +434,9 @@ public class Bicicletas extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ganaActionPerformed
 
-    private void placafieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placafieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_placafieldActionPerformed
-
     private void EspaciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EspaciosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_EspaciosActionPerformed
-
-    private void horafieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horafieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_horafieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -408,20 +455,20 @@ public class Bicicletas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Bicicletas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(motos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Bicicletas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(motos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Bicicletas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(motos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Bicicletas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(motos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Bicicletas().setVisible(true);
+                new motos().setVisible(true);
             }
         });
     }
